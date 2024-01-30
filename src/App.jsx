@@ -11,6 +11,7 @@ export default function App() {
   const featuredPup = puppies.find((pup) => pup.id === featPupId);
   return (
     <div className="App">
+      <h1>PUPPY PALS</h1>
       {puppies.map((puppy) => {
         return (
           <p onClick={() => handleClick(puppy.id)} key={puppy.id}>
@@ -20,7 +21,7 @@ export default function App() {
       })}
 
       {featuredPup && (
-        <div>
+        <div className="Info">
           <h2>{featuredPup.name}</h2>
           <ul>
             <li>Age: {featuredPup.age}</li>
